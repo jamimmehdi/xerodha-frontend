@@ -6,15 +6,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useState } from 'react';
-import { Button, TablePagination, Tooltip } from '@mui/material';
+import { TablePagination } from '@mui/material';
 import { Box } from '@mui/system';
-import { handleSellModalOpen, setSelectedSymbol } from '../helper/BuyingSellingSlice';
-import { useDispatch } from 'react-redux';
 
 export default function SoldTable({ data }) {
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
-    const dispatch = useDispatch();
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -29,7 +26,7 @@ export default function SoldTable({ data }) {
     return (
         <Box>
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+                <Table sx={{ minWidth: 400 }} size="small" aria-label="a dense table">
                     <TableHead>
                         <TableRow>
                             <TableCell>Symbol</TableCell>

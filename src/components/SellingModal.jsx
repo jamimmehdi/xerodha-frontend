@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { useDispatch, useSelector } from 'react-redux';
-import { handleBuyModalClose, handleSellModalClose } from '../helper/BuyingSellingSlice';
+import { handleSellModalClose } from '../helper/BuyingSellingSlice';
 import { useEffect } from 'react';
 import { getRealTimePrice, sellStocks } from '../utils/Services/APICall';
 import { useSnackbar } from 'notistack';

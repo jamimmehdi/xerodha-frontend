@@ -3,10 +3,9 @@ import { Stack } from '@mui/system'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import Holdingstable from '../components/HoldingTable'
 import PurchaseTable from '../components/PurchaseTable';
 import SoldTable from '../components/SoldTable';
-import { getHoldings, getPurchase, getSold } from '../utils/Services/APICall';
+import { getPurchase, getSold } from '../utils/Services/APICall';
 
 export default function Transactions() {
     const [purchaseData, setPurchaseData] = useState([]);

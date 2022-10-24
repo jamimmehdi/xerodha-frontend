@@ -27,7 +27,7 @@ function Navbar() {
 
     return (
         <Stack justifyContent="space-between" direction="row" weight="100%" height="4rem" alignItems="center" px="1rem">
-            <Stack direction="row" alignItems="center" spacing={0.5} onClick={handleHomeNavigation} sx={{cursor: "pointer"}}>
+            <Stack direction="row" alignItems="center" spacing={0.5} onClick={handleHomeNavigation} sx={{ cursor: "pointer" }}>
                 <Typography fontWeight="700" fontSize="1.5rem" color="#e74c3c">xerodha</Typography>
                 <Typography fontWeight="400" fontSize="small" color="#e74c3c">international</Typography>
             </Stack>

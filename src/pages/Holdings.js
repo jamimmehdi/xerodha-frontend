@@ -36,7 +36,7 @@ export default function Holdings() {
             {loading && <Box sx={{ width: '100%', }}>
                 <LinearProgress sx={{ "& .MuiLinearProgress-barColorPrimary": { backgroundColor: "#ff5722" }, bgcolor: "white" }} />
             </Box>}
-            <Holdingstable data={data} />
+            {!holdingError ? <Holdingstable data={data} /> : "Error loading holdings data!"}
         </Stack>
     )
 }

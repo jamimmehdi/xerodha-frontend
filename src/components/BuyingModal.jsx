@@ -68,7 +68,7 @@ export default function BuyingModal() {
 
         enqueueSnackbar('Order placed successfully!', { variant: 'success' });
         updateBalance(_id, dispatch);
-        
+
         handleClose();
     }
 

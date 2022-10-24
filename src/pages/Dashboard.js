@@ -1,5 +1,5 @@
 import { Divider, Skeleton, Typography, useMediaQuery } from '@mui/material'
-import { Box, Stack } from '@mui/system'
+import { Stack } from '@mui/system'
 import PieChartOutlineIcon from '@mui/icons-material/PieChartOutline';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import OpacityIcon from '@mui/icons-material/Opacity';
@@ -8,7 +8,7 @@ import WatchlistItem from '../components/WatchlistItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { getUserbalance, updateBalance } from '../utils/Services/APICall';
+import { getUserbalance } from '../utils/Services/APICall';
 import { updateUserBalance } from '../helper/UserSlice';
 
 const Equity = ({ user_id }) => {

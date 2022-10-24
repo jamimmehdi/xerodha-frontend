@@ -6,7 +6,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useState } from 'react';
-import { Button, TablePagination, Tooltip } from '@mui/material';
+import { Button, TablePagination } from '@mui/material';
 import { Box } from '@mui/system';
 import { handleSellModalOpen, setSelectedSymbol } from '../helper/BuyingSellingSlice';
 import { useDispatch } from 'react-redux';

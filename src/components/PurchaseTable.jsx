@@ -6,15 +6,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useState } from 'react';
-import { Button, TablePagination, Tooltip } from '@mui/material';
+import { TablePagination } from '@mui/material';
 import { Box } from '@mui/system';
-import { handleSellModalOpen, setSelectedSymbol } from '../helper/BuyingSellingSlice';
-import { useDispatch } from 'react-redux';
 
 export default function PurchaseTable({ data }) {
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
-    const dispatch = useDispatch();
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -25,20 +22,14 @@ export default function PurchaseTable({ data }) {
         setPage(0);
     };
 
-    // Handle selling model open
-    const handleSellOpen = (symbol) => {
-        dispatch(setSelectedSymbol(symbol));
-        dispatch(handleSellModalOpen());
-    };
-
     const rows = [...data];
 
     return (
-        <Box>
+        <Box >
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+                <Table sx={{ minWidth: 400 }} size="small" aria-label="a dense table" >
                     <TableHead>
-                        <TableRow>
+                        <TableRow >
                             <TableCell>Symbol</TableCell>
                             <TableCell align="right">Buying Price</TableCell>
                             <TableCell align="right">Qty</TableCell>
@@ -49,7 +40,7 @@ export default function PurchaseTable({ data }) {
                         {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
                             <TableRow
                                 key={index}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                sx={{ '&:last-child td, &:last-child th': { border: 0,  } }}
                             >
                                 <TableCell component="th" scope="row">
                                     {row.symbol}

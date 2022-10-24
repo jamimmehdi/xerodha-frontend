@@ -1,1 +1,1 @@
-export const BASE__URL = 'http://192.168.0.157:4000'
+export const BASE__URL = 'https://xerodha-backend.vercel.app'

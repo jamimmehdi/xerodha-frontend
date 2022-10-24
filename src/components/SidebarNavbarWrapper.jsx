@@ -1,4 +1,4 @@
-import { Box, Divider, Modal, Typography, useMediaQuery } from '@mui/material'
+import { Box, Divider, useMediaQuery } from '@mui/material'
 import { Stack } from '@mui/system'
 import { Outlet } from 'react-router-dom'
 import BuyingModal from './BuyingModal'
