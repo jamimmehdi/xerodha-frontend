@@ -1,4 +1,4 @@
-import { Box, Divider, Skeleton, Typography } from '@mui/material';
+import { Box, Skeleton, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
@@ -93,11 +93,11 @@ export default function Instrument() {
 
             <Typography fontWeight="bold">Historical Reports</Typography>
             <Box height={250} >
-                <Chart data={data} />
+                {!dataError ? <Chart data={data} /> : "Error loading data!"}
             </Box>
-            <TableData data={data} />
+            {!dataError ? <TableData data={data} /> : "Error loading data!"}
             <Typography fontWeight="bold">About Company</Typography>
-            <Typography fontSize="small">{loaded ? moreInfo.longBusinessSummary : "Error"}</Typography>
+            {!moreInfoError ? <Typography fontSize="small">{loaded ? moreInfo.longBusinessSummary : "Error"}</Typography> : "Error loading data!"}
         </Stack>
     )
 }
