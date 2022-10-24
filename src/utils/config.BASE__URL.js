@@ -1,0 +1,1 @@
+export const BASE__URL = 'http://192.168.0.157:4000'
