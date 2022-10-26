@@ -132,12 +132,12 @@ export default function Dashboard() {
 
             <Divider light />
             <Stack direction="row" spacing={3} mt="2rem">
-                <Stack direction="column" width="40%" maxWidth={350}>
+                {/*<Stack direction="column" width="40%" maxWidth={350}>
                     <Typography fontWeight="bold">Watchlist</Typography>
                     {watchlist.length > 0 && watchlist.map((instrument) => (
                         <WatchlistItem key={instrument} symbol={instrument} />
                     ))}
-                </Stack>
+                    </Stack>*/}
                 <Stack direction="column" width="60%" minHeight="700px">
                     <Outlet />
                 </Stack>

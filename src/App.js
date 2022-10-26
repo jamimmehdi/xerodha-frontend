@@ -28,9 +28,8 @@ function App() {
       <Route path={REGISTER} element={user ? <Navigate to={HOME} /> : <Register />} />
       <Route path={HOME} element={user ? <SidebarNavbarWrapper /> : <Navigate to={LOGIN} />}>
         <Route path={HOME} element={<Navigate to={DASHBOARD} replace />} />
-        <Route path={DASHBOARD} element={<Dashboard />}>
-          <Route path={INSTRUMENT} element={<Instrument />} />
-        </Route>
+        <Route path={DASHBOARD} element={<Dashboard />} />
+        <Route path={INSTRUMENT} element={<Instrument />} />
         <Route path={HOLDINGS} element={<Holdings />} />
         <Route path={TRANSACTIONS} element={<Transactions />} />
       </Route>

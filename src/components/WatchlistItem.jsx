@@ -64,7 +64,7 @@ const MarketDepth = ({ data }) => {
 }
 
 
-export default function WatchlistItem({ symbol }) {
+export default function WatchlistItem({ symbol, currentTab }) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const user = useSelector((state) => state.user.user);
@@ -131,6 +131,7 @@ export default function WatchlistItem({ symbol }) {
 
         const data = {
             user_id: user._id,
+            tab: currentTab,
             symbol: symbol
         }
 
